@@ -27,7 +27,6 @@ export class ManageDraftService {
   // Fill out form fields with data from localstorage
   fillForm(currentForm:FormGroup, stepName:string) {
     const localStorageData = this.getLocalStorageData(stepName);
-
     // check if data from localstorage exists
     if (localStorageData !== null) {
       // if data does exist, use that data to setValue on the form

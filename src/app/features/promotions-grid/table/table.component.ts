@@ -31,9 +31,6 @@ export class TableComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit():void {
-
-
-
     // fetch Promotions
     this.promotionsS.fetchPromotions()
     .subscribe(response => {
