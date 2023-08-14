@@ -1,0 +1,111 @@
+<button class="back-btn" backButton>
+  <span></span>
+  << powrót do listy promocji
+</button>
+<section class="flex gap-1">
+  <div class="promo-column w-1/4 px-2 py-2">
+  <ul class="list">
+    <li>
+      <button
+      class="promo-btn flex w-full items-center"
+      data-id="definition"
+      setCurrentStep>
+      <span class="promo-btn__number">1</span>
+      <span class="promo-btn__name">Definition</span>
+    </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="choose-products"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">2</span>
+        <span class="promo-btn__name">Choose Products</span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="exclude-products"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">3</span>
+        <span class="promo-btn__name">Exclude Products</span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="bonus-products"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">4</span>
+        <span class="promo-btn__name">Bonus Products</span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="products-limits"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">5</span>
+        <span class="promo-btn__name">Products Limits</span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="choose-clients"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">6</span>
+        <span class="promo-btn__name">Choose Clients</span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="exclude-clients"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">7</span>
+        <span class="promo-btn__name">Exclude Clients</span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="clients-limits"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">8</span>
+        <span class="promo-btn__name">Clients Limits</span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="promo-btn flex w-full items-center"
+        data-id="summary"
+        setCurrentStep
+        [disabled]="this.isEmpty ? isDisabled : !isDisabled">
+        <span class="promo-btn__number">9</span>
+        <span class="promo-btn__name">Summary</span>
+      </button>
+    </li>
+  </ul>
+  </div>
+  <!-- SELECT CURRENT PAGE -->
+  <div class="w-3/4" [ngSwitch]="this.currentStep">
+    <app-definition *ngSwitchCase="'definition'"></app-definition>
+    <app-choose-products *ngSwitchCase="'choose-products'"></app-choose-products>
+    <app-exclude-products *ngSwitchCase="'exclude-products'"></app-exclude-products>
+    <app-bonus-products *ngSwitchCase="'bonus-products'"></app-bonus-products>
+    <app-products-limits *ngSwitchCase="'products-limits'"></app-products-limits>
+    <app-choose-clients *ngSwitchCase="'choose-clients'"></app-choose-clients>
+    <app-exclude-clients *ngSwitchCase="'exclude-clients'"></app-exclude-clients>
+    <app-clients-limits *ngSwitchCase="'clients-limits'"></app-clients-limits>
+    <app-summary *ngSwitchCase="'summary'"></app-summary>
+  </div>
+</section>

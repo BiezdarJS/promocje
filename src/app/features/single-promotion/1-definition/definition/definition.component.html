@@ -1,0 +1,152 @@
+<form class="flex gap-1 h-full" [formGroup]="definitionForm">
+<div class="promo-column w-1/2 py-4 px-8 bg-gray-100">
+  <h3 class="single-promo__heading">Description</h3>
+  <div class="form-control">
+    <input
+    class="block mb-6"
+    type="text"
+    placeholder="Marketing name"
+    (input)="onChange()"
+    name="marketing_name"
+    formControlName="marketing_name"
+    >
+    <div data-tooltip="*Aliquam elementum nisl nisi, eget venenatis nulla iaculis quis. Nullam quis tincidunt arcu. Aliquam vel tempor ex." class="break mb-6 ml-2">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect fill="none" height="256" width="256"/>
+        <circle cx="128" cy="128" fill="none" r="96" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <polyline fill="none" points="120 120 128 120 128 176 136 176" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <circle cx="126" cy="84" r="12" style="fill: #991300;"/>
+      </svg>
+    </div>
+
+  </div>
+  <div class="form-control">
+    <input
+      class="block mb-6"
+      type="text"
+      placeholder="Technical name"
+      (input)="onChange()"
+      name="technical_name"
+      formControlName="technical_name"
+    >
+    <div data-tooltip="*Aliquam elementum nisl nisi, eget venenatis nulla iaculis quis. Nullam quis tincidunt arcu. Aliquam vel tempor ex." class="break mb-6 ml-2">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect fill="none" height="256" width="256"/>
+        <circle cx="128" cy="128" fill="none" r="96" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <polyline fill="none" points="120 120 128 120 128 176 136 176" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <circle cx="126" cy="84" r="12" style="fill: #991300;"/>
+      </svg>
+    </div>
+  </div>
+  <div class="form-control">
+    <textarea
+      class="block w-full h-40 mb-14"
+      type="text"
+      placeholder="Description"
+      formControlName="description"
+      >
+    </textarea>
+    <div data-tooltip="*Aliquam elementum nisl nisi, eget venenatis nulla iaculis quis. Nullam quis tincidunt arcu. Aliquam vel tempor ex." class="break mb-6 ml-2">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect fill="none" height="256" width="256"/>
+        <circle cx="128" cy="128" fill="none" r="96" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <polyline fill="none" points="120 120 128 120 128 176 136 176" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <circle cx="126" cy="84" r="12" style="fill: #991300;"/>
+      </svg>
+    </div>
+  </div>
+  <h3 class="single-promo__heading">Catalog promotion tutorial</h3>
+  <p>
+    Proin nibh erat, commodo maximus leo vitae, interdum efficitur lectus. Morbi volutpat metus vitae lacus commodo, at dignissim ex consectetur. Maecenas venenatis tristique dictum. Morbi egestas ante vel massa accumsan, ut maximus nisl tempor. Vivamus et tellus id enim convallis efficitur vitae a ipsum. Ut sagittis purus sed nunc bibendum imperdiet. Praesent ac laoreet turpis. Donec arcu neque, commodo id est vitae, placerat consequat metus.
+  </p>
+  <p>
+    Donec semper quam sed est mattis, vitae posuere odio posuere. Praesent sodales quam in dui semper scelerisque. Nulla quis ligula et ante lobortis semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris at lobortis augue, at lobortis sem. Maecenas ac tempus nibh. Duis faucibus porta purus, dignissim scelerisque nibh pharetra sit amet. In bibendum dolor ac neque finibus viverra.
+  </p>
+</div>
+<div class="promo-column w-1/2 py-4 px-8 bg-gray-100">
+  <h3 class="single-promo__heading">Conditions</h3>
+  <div class="form-control">
+    <select
+      class="w-full mb-6"
+      formControlName="portal"
+    >
+      <option value="portal-1">
+        Portal 1
+      </option>
+      <option value="portal-2">
+        Portal 2
+      </option>
+      <option value="portal-3">
+        Portal 3
+      </option>
+    </select>
+    <div data-tooltip="*Aliquam elementum nisl nisi, eget venenatis nulla iaculis quis. Nullam quis tincidunt arcu. Aliquam vel tempor ex." class="break mb-6 ml-2">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect fill="none" height="256" width="256"/>
+        <circle cx="128" cy="128" fill="none" r="96" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <polyline fill="none" points="120 120 128 120 128 176 136 176" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <circle cx="126" cy="84" r="12" style="fill: #991300;"/>
+      </svg>
+    </div>
+  </div>
+  <div class="form-control">
+    <select
+      class="w-full mb-12"
+      formControlName="type"
+    >
+      <option value="type-1">
+        Type 1
+      </option>
+      <option value="type-2">
+        Type 2
+      </option>
+      <option value="type-3">
+        Type 3
+      </option>
+    </select>
+    <div data-tooltip="*Aliquam elementum nisl nisi, eget venenatis nulla iaculis quis. Nullam quis tincidunt arcu. Aliquam vel tempor ex." class="break mb-6 ml-2">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect fill="none" height="256" width="256"/>
+        <circle cx="128" cy="128" fill="none" r="96" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <polyline fill="none" points="120 120 128 120 128 176 136 176" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <circle cx="126" cy="84" r="12" style="fill: #991300;"/>
+      </svg>
+    </div>
+  </div>
+  <div class="form-control">
+    <h4 class="single-promo__subheading">Benefit amount</h4>
+    <div data-tooltip="*Aliquam elementum nisl nisi, eget venenatis nulla iaculis quis. Nullam quis tincidunt arcu. Aliquam vel tempor ex." class="break mb-6 ml-2">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+        <rect fill="none" height="256" width="256"/>
+        <circle cx="128" cy="128" fill="none" r="96" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <polyline fill="none" points="120 120 128 120 128 176 136 176" stroke="#991300" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <circle cx="126" cy="84" r="12" style="fill: #991300;"/>
+      </svg>
+    </div>
+  </div>
+  <div class="flex items-center justify-between">
+    <div class="my-4">
+      <label for="start-date">
+        Start Date
+      </label>
+      <input
+				id="start-date"
+				type="date"
+				placeholder="Start date"
+				value=""
+				formControlName="start_date">
+    </div>
+    <div>
+      <label for="finish-date">
+        Finish Date
+      </label>
+      <input
+				id="finish-date"
+				type="date"
+				placeholder="Finish date"
+				value=""
+				formControlName="finish_date">
+    </div>
+  </div>
+</div>
+</form>

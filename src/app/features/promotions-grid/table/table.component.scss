@@ -1,0 +1,19 @@
+.promotions-table-wrap {
+  margin-top: 100px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+table {
+  width: 100%;
+}
+
+.promotions-table {
+  border: 1px solid #ddd;
+}
+
+.add-btn {
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

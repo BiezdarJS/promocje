@@ -1,0 +1,44 @@
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    mask-size: 100% 100%;
+    transition: all .15s ease-in-out;
+    &--blue {
+        background-color: $accent!important;
+    }
+    &--sm {
+        width: 18px;
+        height: 18px;
+    }
+    &--medium-sm {
+        width: 14px;
+        height: 14px;
+    }
+    &--xsm {
+        width: 10px;
+        height: 10px;
+    }
+    &--close {
+        background-color: transparent;
+        &:hover {
+            background-color: transparent!important;
+            opacity: 1;
+        }
+        &:before,
+        &:after {
+            position: absolute;
+            left: 7px;
+            content: ' ';
+            height: 18px;
+            width: 2px;
+            background-color: #333;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+}

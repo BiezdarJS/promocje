@@ -1,0 +1,32 @@
+<div class="promotions-table-wrap block max-w-lg mx-auto p-12">
+
+
+<app-add-btn></app-add-btn>
+
+
+<table class="promotions-table mt-4 mx-auto" id="makeEditable">
+  <thead>
+    <tr>
+      <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">No.</th>
+      <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Nazwa</th>
+      <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="this.allPromotions">
+      <tr *ngFor="let promotion of this.allPromotions;let indexOfelement=index;">
+        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">{{ indexOfelement + 1 }} </td>
+        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> {{ promotion['definition']['marketing_name'] }} </td>
+        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+          <app-edit-btn [id]="promotion['id']"></app-edit-btn>
+          <app-delete-btn [id]="promotion['id']" (openPopupEvent)="showDeleteModal()"></app-delete-btn>
+        </td>
+      </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+<!-- DELETE POPUP -->
+<ng-template modalHost></ng-template>
