@@ -33,7 +33,6 @@ export class EditBtnComponent implements OnInit, OnDestroy {
     private promotionsS: PromotionService,
     private manageDraftS: ManageDraftService,
     private summaryBtnModeS: SummaryBtnModeNotificationService,
-    private currentPromotionIdS: CurrentPromotionIdNotificationService
   ) {}
 
   ngOnInit():void {
@@ -48,11 +47,8 @@ export class EditBtnComponent implements OnInit, OnDestroy {
     });
   }
 
-  onEdit(id) {
-    // First, send ID notification which will be needed in summary component to edit
-    this.currentPromotionIdS.sendCurrentPromotionIdNotification(id);
-    // Then, change summary btn text value to 'Edit'
-    this.summaryBtnModeS.sendSummaryBtnNotification('Edit');
+
+  updateLocalstorage(id) {
     // Get product (which will be updated) based on Id collected from parent component
     let currentPromotion = this.allPromotions.find(p => p.id === id);
     // Populate localstorage which next will be used by the fillForm method on each step initialization
@@ -62,6 +58,11 @@ export class EditBtnComponent implements OnInit, OnDestroy {
     if (currentPromotion.choose_products) {
       this.manageDraftS.saveDraft(StepsEnum.ChooseProducts, currentPromotion.choose_products);
     }
+  }
+
+  changeSummaryPageBtnName() {
+    // Change summary btn text value to 'Edit'
+    this.summaryBtnModeS.sendSummaryBtnNotification('Edit');
   }
 
 
