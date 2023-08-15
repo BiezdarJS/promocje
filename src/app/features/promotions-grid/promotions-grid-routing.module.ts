@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'add',
     component: SinglePromotionComponent,
   },
-  { path: 'edit',
+  { path: 'edit/:id',
     component: SinglePromotionComponent,
   }
 ];

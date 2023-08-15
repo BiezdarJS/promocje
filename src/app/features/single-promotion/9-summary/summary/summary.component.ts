@@ -4,7 +4,7 @@ import { IPromotion } from 'src/app/models/promotion.model';
 // Enums
 import { StepsEnum } from 'src/app/enums/steps.enum';
 // Router
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 // RxJS
 import { Subscription } from 'rxjs';
 // Services
@@ -33,16 +33,16 @@ export class SummaryComponent implements OnInit, OnDestroy {
   // Summary Btn subscription
   summaryBtnSubscription: Subscription;
   summaryBtnMode: string;
-  // Current Promotion Id subscription
-  currentPromotionIdSubscription: Subscription;
-  currentPromotionId: string;
+  // getID
+  getId: string;
+
 
   constructor(
     private promotionS: PromotionService,
     private manageDraftS: ManageDraftService,
     private summaryBtnModeS: SummaryBtnModeNotificationService,
-    private currentPromotionIdS: CurrentPromotionIdNotificationService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit():void {
@@ -50,10 +50,7 @@ export class SummaryComponent implements OnInit, OnDestroy {
     this.summaryBtnSubscription = this.summaryBtnModeS.summaryBtnMode$.subscribe(d => {
       this.summaryBtnMode = d;
     });
-    // Subscribe to Current Promotion Id Notification
-    this.currentPromotionIdSubscription = this.currentPromotionIdS.currentPromotionId$.subscribe(d => {
-      this.currentPromotionId = d;
-    });
+    this.getId = this.route.snapshot.params['id'];
   }
 
 
@@ -78,7 +75,7 @@ export class SummaryComponent implements OnInit, OnDestroy {
 
     // edit promotion case
     if (this.summaryBtnMode === 'Edit') {
-      this.newPromotion = this.promotionS.updatePromotion(this.currentPromotionId,this.promotion);
+      this.newPromotion = this.promotionS.updatePromotion(this.getId,this.promotion);
       this.newPromotion.subscribe({
         complete: () => {
           // Redirect to Table
@@ -94,8 +91,6 @@ export class SummaryComponent implements OnInit, OnDestroy {
   ngOnDestroy():void {
     // Unsubscribe from Summary Btn Notification
     this.summaryBtnSubscription.unsubscribe();
-    // Unsubscribe from Current Promotion Id Notification
-    this.currentPromotionIdSubscription.unsubscribe();
   }
 
 

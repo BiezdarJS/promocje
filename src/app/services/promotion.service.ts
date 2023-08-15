@@ -53,7 +53,7 @@ export class PromotionService {
 
 
   // Delete Promotions
-  deletePromotion(id: string) {
+  deletePromotion(id: string):Observable<Object> {
     return this.http.delete('https://promotions-58746-default-rtdb.firebaseio.com/promotions/'+id+'.json');
   }
 
