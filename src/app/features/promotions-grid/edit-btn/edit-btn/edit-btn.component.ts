@@ -48,7 +48,7 @@ export class EditBtnComponent implements OnInit, OnDestroy {
   }
 
 
-  updateLocalstorage(id) {
+  updateLocalStorage(id) {
     // Get product (which will be updated) based on Id collected from parent component
     let currentPromotion = this.allPromotions.find(p => p.id === id);
     // Populate localstorage which next will be used by the fillForm method on each step initialization
