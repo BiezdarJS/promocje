@@ -5,15 +5,14 @@ import { EditBtnModule } from './edit-btn/edit-btn.module';
 import { DeleteBtnModule } from './delete-btn/delete-btn.module';
 import { SinglePromotionModule } from '../single-promotion/single-promotion.module';
 import { AddBtnModule } from './add-btn/add-btn.module';
-import { ModalModule } from './modal/modal.module';
-import { ModalHostDirective } from 'src/app/directives/modal-host.directive';
-
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
   declarations: [
     TableComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     CommonModule,
@@ -21,8 +20,8 @@ import { ModalHostDirective } from 'src/app/directives/modal-host.directive';
     AddBtnModule,
     EditBtnModule,
     DeleteBtnModule,
-    ModalModule,
-    ModalHostDirective
+    MatDialogModule,
+
   ],
   exports: [
     TableComponent

@@ -18,7 +18,7 @@
         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> {{ promotion['definition']['marketing_name'] }} </td>
         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
           <app-edit-btn [id]="promotion['id']"></app-edit-btn>
-          <app-delete-btn [id]="promotion['id']" (openPopupEvent)="showDeleteModal()"></app-delete-btn>
+          <app-delete-btn [id]="promotion['id']"></app-delete-btn>
         </td>
       </tr>
   </tbody>
@@ -26,7 +26,3 @@
 
 
 </div>
-
-
-<!-- DELETE POPUP -->
-<ng-template modalHost></ng-template>

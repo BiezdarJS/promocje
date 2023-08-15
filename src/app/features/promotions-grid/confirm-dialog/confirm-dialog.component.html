@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  {{data.message}}
+</div>
+<footer class="flex justify-center pb-6">
+  <div class="buttons-wrap flex justify-between align-center w-32">
+    <button
+      [mat-dialog-close]="true"
+      type="button"
+      class="add-btn text-white bg-[#9f0927] hover:bg-[#870620] focus:ring-4 focus:outline-none focus:ring-[#9f0927]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#9f0927]/80 dark:focus:ring-[#9f0927]/40 mr-2 mb-2">
+      Tak
+    </button>
+    <button
+      [mat-dialog-close]="false"
+      type="button"
+      class="add-btn text-white bg-[#8f8f8f] hover:bg-[#870620] focus:ring-4 focus:outline-none focus:ring-[#8f8f8f]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#8f8f8f]/80 dark:focus:ring-[#8f8f8f]/40 mr-2 mb-2">
+      Nie
+    </button>
+  </div>
+</footer>

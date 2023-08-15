@@ -1,11 +1,9 @@
 import { AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { ModalHostDirective } from 'src/app/directives/modal-host.directive';
 // Enums
 import { StepsEnum } from 'src/app/enums/steps.enum';
 // Services
 import { ManageDraftService } from 'src/app/services/manage-draft.service';
 import { PromotionService } from 'src/app/services/promotion.service';
-import { ModalComponent } from '../modal/modal/modal.component';
 
 @Component({
   selector: 'app-table',
@@ -17,11 +15,8 @@ import { ModalComponent } from '../modal/modal/modal.component';
   ]
 })
 
-export class TableComponent implements OnInit, AfterViewInit {
+export class TableComponent implements OnInit {
 
-  // New Task
-  @ViewChild(ModalHostDirective, {static:true}) modalHost!: ModalHostDirective;
-  modalContainerRef!: any;
 
   allPromotions!: any;
 
@@ -42,21 +37,6 @@ export class TableComponent implements OnInit, AfterViewInit {
     })
 
   }
-
-
-  ngAfterViewInit(): void {
-    // console.log(this.deletePopupHost);
-    this.modalContainerRef = this.modalHost.viewContainerRef;
-  }
-
-
-  // Add Delete Modal
-  showDeleteModal() {
-    this.modalContainerRef.createComponent(ModalComponent);
-  }
-
-
-
 
 
 
