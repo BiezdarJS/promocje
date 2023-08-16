@@ -11,7 +11,6 @@ import { Subscription } from 'rxjs';
 import { ManageDraftService } from 'src/app/services/manage-draft.service';
 import { PromotionService } from 'src/app/services/promotion.service';
 import { SummaryBtnModeNotificationService } from 'src/app/services/summary-btn-mode-notification.service';
-import { CurrentPromotionIdNotificationService } from 'src/app/services/current-promotion-id-notification.service';
 
 
 

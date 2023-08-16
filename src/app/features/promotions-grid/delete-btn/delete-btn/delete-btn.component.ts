@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 // Router
 import { Router } from '@angular/router';
 // Services
-import { CurrentPromotionIdNotificationService } from 'src/app/services/current-promotion-id-notification.service';
 import { PromotionService } from 'src/app/services/promotion.service';
 import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 
