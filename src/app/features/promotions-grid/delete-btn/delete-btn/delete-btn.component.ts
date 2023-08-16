@@ -1,10 +1,13 @@
-import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+// Angular Material
 import { MatDialog } from '@angular/material/dialog';
 // Router
 import { Router } from '@angular/router';
+// Components
+import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 // Services
 import { PromotionService } from 'src/app/services/promotion.service';
-import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+
 
 
 @Component({
@@ -29,8 +32,6 @@ export class DeleteBtnComponent {
 
 
   onDelete(id: string) {
-    // Set ID of the Current Promotion
-    // this.currentPromotionIdS.sendCurrentPromotionIdNotification(id);
     const confirmDialog = this.dialog.open(ConfirmDialogComponent, {
       data: {
         title: 'Usuń',
@@ -49,22 +50,9 @@ export class DeleteBtnComponent {
         })
       }
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // // Emit event to Show Modal
-    // this.openPopupEvent.emit();
   }
+
+
 
 
 }

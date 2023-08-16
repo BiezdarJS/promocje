@@ -12,7 +12,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 @NgModule({
   declarations: [
     TableComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -21,10 +21,9 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     EditBtnModule,
     DeleteBtnModule,
     MatDialogModule,
-
   ],
   exports: [
-    TableComponent
+    TableComponent,
   ]
 })
 export class PromotionsGridModule { }
