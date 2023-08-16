@@ -43,7 +43,7 @@ export class DeleteBtnComponent {
         this.promotionS.deletePromotion(id)
         .subscribe({
           complete: () => {
-            // Redirect to the tasks grid
+            // Refresh current component
             this.router.routeReuseStrategy.shouldReuseRoute = () => false;
             this.router.navigate(['/']);
           }
