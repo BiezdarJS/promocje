@@ -66,7 +66,7 @@ export class SummaryComponent implements OnInit, OnDestroy {
       this.newPromotion = this.promotionS.postPromotion(this.promotion);
       this.newPromotion.subscribe({
         complete: () => {
-          // Redirect to the tasks grid
+          // Redirect to Table
           this.router.navigate(['/']);
         }
       });
