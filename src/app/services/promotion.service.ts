@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 // Interfaces
 import { IPromotion } from 'src/app/models/promotion.model';
 // RxJS
-import { Observable, map } from 'rxjs';
+import { Observable, map, take } from 'rxjs';
 // HttpClient
 import { HttpClient } from '@angular/common/http';
 
@@ -41,6 +41,7 @@ export class PromotionService {
           }
           return promotionsArray;
         }),
+        take(1)
     )
   }
 

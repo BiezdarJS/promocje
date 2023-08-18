@@ -66,7 +66,7 @@ export class SummaryComponent implements OnInit, OnDestroy {
       this.newPromotion = this.promotionS.postPromotion(this.promotion);
       this.newPromotion.subscribe({
         complete: () => {
-          // Redirect to Table
+          // Redirect to the Table Component
           this.router.navigate(['/']);
         }
       });
@@ -77,7 +77,7 @@ export class SummaryComponent implements OnInit, OnDestroy {
       this.newPromotion = this.promotionS.updatePromotion(this.getId,this.promotion);
       this.newPromotion.subscribe({
         complete: () => {
-          // Redirect to Table
+          // Redirect to the Table Component
           this.router.navigate(['/']);
         }
       });
