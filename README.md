@@ -1,3 +1,3 @@
-Apka dodająca nowe promocje.
-Wykorzystuje REST API.
+Apka dodająca nowe promocje.<br />
+Wykorzystuje REST API.<br />
 Instalacja: npm i
